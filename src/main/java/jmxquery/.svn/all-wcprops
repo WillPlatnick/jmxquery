@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/42/trunk/src/main/java/jmxquery
+END
+ParseError.java
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/2/trunk/src/main/java/jmxquery/ParseError.java
+END
+JMXQuery.java
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/42/trunk/src/main/java/jmxquery/JMXQuery.java
+END
+JMXProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/29/trunk/src/main/java/jmxquery/JMXProvider.java
+END
+DefaultJMXProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/37/trunk/src/main/java/jmxquery/DefaultJMXProvider.java
+END

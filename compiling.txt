@@ -1,0 +1,37 @@
+# Copy of wiki page: https://code.google.com/p/jmxquery/wiki/Compiling
+Compiling the jmxquery nagios plugin
+
+  Requirements
+  
+      * jdk (javac)
+      * Install apache-maven-3.0.3, or newer.
+      * svn, wget, tar 
+  
+  Maven install
+  
+   mkdir ~/Downloads
+   cd ~/Downloads
+   wget http://www.apache.org/dyn/closer.cgi/maven/binaries/apache-maven-3.0.3-bin.tar.gz
+   tar -zxvf apache-maven-3.0.3-bin.tar.gz
+  
+  JMXquery compile
+  
+  # Checkout
+  
+    svn checkout http://jmxquery.googlecode.com/svn/trunk/ jmxquery-read-only
+  
+    cd jmxquery-read-only
+  
+  JMXquery maven compile command
+  
+    ~/Downloads/apache-maven-3.0.3/bin/mvn compile 
+  
+      (Ensure you are in the jmxquery-read-only directory) 
+  
+  JMXquery maven package command
+  
+    ~/Downloads/apache-maven-3.0.3/bin/mvn package 
+  
+      (Ensure you are in the jmxquery-read-only directory) 
+  
+  # Your new jmx will now be in target/jmxquery.jar 

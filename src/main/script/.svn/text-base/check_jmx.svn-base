@@ -1,0 +1,6 @@
+#!/bin/sh
+#
+# Nagios plugin to monitor Java JMX (http://java.sun.com/jmx)attributes.
+#
+RDIR=`dirname $0`
+$JAVA_HOME/bin/java  -jar $RDIR/jmxquery.jar $@

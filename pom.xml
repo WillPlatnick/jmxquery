@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+    <name>jmxquery</name>
+    <groupId>jmxquery</groupId>
+    <artifactId>jmxquery</artifactId>
+    <version>1.4-SNAPSHOT</version>
+
+    <packaging>jar</packaging>
+	<url>http://code.google.com/p/jmxquery</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <scm>
+        <connection>scm:svn:http://jmxquery.googlecode.com/svn/trunk/</connection>
+        <developerConnection>scm:svn:https://jmxquery.googlecode.com/svn/trunk/</developerConnection>
+        <url>http://code.google.com/p/jmxquery/source/browse/</url>
+    </scm>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>1.9.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>6.3.1</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>2.2-beta-5</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                        <phase>package</phase>
+                    </execution>
+                </executions>
+				<configuration>
+					<descriptors>
+						<descriptor>assembly-descriptor.xml</descriptor>
+					</descriptors>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+                <version>2.5.1</version>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+
+            <plugin>
+				<artifactId>maven-jar-plugin</artifactId>
+                <version>2.4</version>
+				<configuration>
+					<finalName>${project.name}</finalName>
+					<archive>
+						<manifest>
+							<mainClass>jmxquery.JMXQuery</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
+
+            <plugin>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.2.1</version>
+                <configuration>
+                    <goals>package</goals>
+                </configuration>
+            </plugin>
+		</plugins>
+	</build>
+</project>

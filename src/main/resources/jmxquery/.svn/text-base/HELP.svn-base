@@ -1,0 +1,34 @@
+Usage: check_jmx [-option...] -U url -O object -A attribute
+       (to query an attribute)
+   or  check_jmx [-option...] -U url -O object -M method
+       (to invoke a zero-argument method)
+   or  check_jmx -help
+       (to display this help page)
+
+Mandatory parameters are:
+ -U     JMX URL, for example: "service:jmx:rmi:///jndi/rmi://localhost:1616/jmxrmi"
+ -O     Object name to be checked, for example, "java.lang:type=Memory"
+ -A   	Attribute of the object to be checked, for example, "NonHeapMemoryUsage" (not compatible with -M switch)
+ -M     Zero-argument method to be invoked (not compatible with -A switch)
+
+Options are:
+ -K <key>
+        Key for compound data, for example, "used"
+ -I <info attribute>
+        Attribute of the object containing information for text output
+ -J <info attribute key>
+        Attribute key for -I attribute compound data, for example, "used"
+ -v[v[v[v]]]
+	    Verbatim level controlled as a number of v
+ -w <limit>
+	    Warning long value
+ -c <limit>
+	    Critical long value
+ -default <value>
+        Use default value if requested object/attribute/method does not exist
+ -username <user name> -password <password>
+	    Credentials for JMX
+
+Note that if warning level > critical, system checks object attribute value to be LESS THAN OR EQUAL warning, critical
+If warning level < critical, system checks object attribute value to be MORE THAN OR EQUAL warning, critical 
+	
