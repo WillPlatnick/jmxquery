@@ -2,6 +2,7 @@ jmxquery
 ========
 
 A nagios/icinga plugin to query JMX values - Forked from https://code.google.com/p/jmxquery/ 
+Then forked again from https://github.com/WillPlatnick/jmxquery
 
 Why Forked?
 ==========
@@ -10,6 +11,10 @@ The development doesn't seem to be active and issues have been hanging around fo
 
 What's New?
 ==========
+
+Requires Java 11 or later to compile.
+
+Updated 3rd party dependencies.
 
 The check_jmx shell script will now use the java from your $PATH and will pass in spaces, now allowing you to query JMX objects with spaces in them
 
